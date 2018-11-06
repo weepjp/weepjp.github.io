@@ -1,0 +1,1 @@
+<? phpinfo(); ?><hr>test
