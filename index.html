@@ -1,21 +1,105 @@
-<html><head><meta charset="UTF-8" />
-<title> w e e p j p . g i t h u b . i o </title>
-<link rel="icon" sizes="16x16" href="https://weepjp.github.io/favicon.ico" />
-  
-<meta property="og:type" content="website" />
-<meta property="og:title" content="w e e p j p . g i t h u b . i o" />
-<meta property="og:site_name" content="weepjp.github.io" />
-<meta property="og:description" content="ギフハブテスト" />
-<meta property="og:url" content="https://weepjp.github.io/" />
-<meta property="og:image" content="https://weepjp.github.io/320.png" />
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="start" href="https://weep.me/" title="Home" />
+  <link rel="icon"  href="/favicon.ico?2023-12-17" type="image/x-icon" />
+  <link rel="shortcut icon" href="/favicon.ico?2023-12-17" type="image/x-icon" />
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background:#dec;
+    }
 
-<meta itemprop="name" content="w e e p j p . g i t h u b . i o" />
-<meta itemprop="description" content="ギフハブテスト" />
-<meta itemprop="image" content="https://weepjp.github.io/320.png" />
+    .page-text {
+      text-align: center;
+      margin-bottom: 1px;
+    }
 
+    .link-container {
+      border: 6px solid #cdcdfe;
+      border-radius: 10px;
+      padding: 48px;
+      margin: 1px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      width:320px;
+      background:#fff;
+    }
+
+    .link-item {
+      text-align: center;
+    }
+
+    .link-item img {
+      width: 48px;
+      height: 48px;
+    }
+  </style>
+  <title>おいらの居場所。</title>
 </head>
 <body>
+  <div class="page-text">
+    <h1>おいらの居場所。</h1>
+  </div>
+  <div class="link-container" id="linkContainer"></div>
 
-test
+  <script>
+    // Load JSON data
+    // Fetch data from external domain
+    fetch('/l.json?202312172322')
+      .then(response => {
+        // Check if the response has CORS headers
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => displayLinks(data))
+      .catch(error => console.error('Error:', error));
+      
+      
 
-</body></html>
+    // Display links
+    function displayLinks(links) {
+      const linkContainer = document.getElementById('linkContainer');
+      links.forEach((link, index) => {
+        const linkItem = document.createElement('div');
+        linkItem.classList.add('link-item');
+
+        const linkImage = document.createElement('img');
+        linkImage.src = link.i;
+        linkImage.alt = '';
+        linkItem.appendChild(linkImage);
+
+        const linkAnchor = document.createElement('a');
+        linkAnchor.rel = 'me';
+        linkAnchor.target = '_blank';
+        linkAnchor.href = link.u;
+        linkAnchor.title = link.t;
+        linkAnchor.appendChild(linkItem);
+
+        linkContainer.appendChild(linkAnchor);
+
+        // Add <p> tag after every 5 links
+        if ((index + 1) % 5 === 0) {
+          linkContainer.appendChild(document.createElement('p'));
+        }
+      });
+    }
+  </script>
+
+  <div class="page-text">
+    <h2>© 2023 weepjp.</h2>
+  </div>
+
+</body>
+</html>
