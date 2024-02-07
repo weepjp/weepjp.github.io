@@ -102,7 +102,7 @@
     // Fetch data from external domain
     Promise.race([
       timeoutPromise,
-      fetch('https://raw.githubusercontent.com/weepjp/weepjp.github.io/master/l.json?20231220')
+      fetch('https://raw.githubusercontent.com/weepjp/weepjp.github.io/master/l.json?20240208')
         .then(response => {
           // Check if the response has CORS headers
           if (!response.ok) {
