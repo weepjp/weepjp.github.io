@@ -59,6 +59,25 @@
 		"t": "Pixiv",
 		"i": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAACVBMVEX///8Blvr///8CLniZAAAAAXRSTlMAQObYZgAAAJdJREFUSMfd1uEKgDAIBGDP93/oYFAMPV1XECN/mt9ohW5mV6AJi4EbIZbPBNAEIAoVAKLYD7CsT5FEW02IsfKoa0BWjClDtxwRll4evbC0Wf7RMhjJGngE3gAwgJFqgL8GkAH+DyAAfwIgABdB3Q8UeNdxuSdIh1g/MVZT43xej6V7P253sJ5k+x8oHxy7+k1Av2tIt5kDsf8JxkCeZRIAAAAASUVORK5CYII="
 	},
+
+	{
+		"u": "https://mypage.syosetu.com/2895458/",
+		"t": "小説家になろう (syosetu.com)",
+		"i": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAD1BMVEX/////AACU3egauM4BqsSAR0D6AAAAAnRSTlP/AOW3MEoAAAC6SURBVHja7dbRCoMwEETRyez9/28u2MYEjTH7ILTQeVFkDhLYwKqUUrSYrVvrq0RFqeSBlAW/FrZkQETE8yDTJyK+7wgsAI6AOwDsL7yfcxCfgm1XuvIDYXv/NgUd5VZA0A69g5iArt8swaR/BiLgAigFQCkAaoEeADd9uS8t9GUb6xh3lKPHnowCnKcbjQPD/jWQGPU1Aq51WLyfNlBV8kID57FNENBCaAYtBrxF/9Q8vgnkl5Ps+vMCDp8D9Ygma0kAAAAASUVORK5CYII="
+	},
+	{
+		"u": "https://kakuyomu.jp/users/weep",
+		"t": "カクヨム (kakuyomu.jp)",
+		"i": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwAgMAAAAqbBEUAAAACVBMVEUnksr/AAD///+EQfg9AAAAAnRSTlP/AOW3MEoAAAA6SURBVCjPYwhlgINQhgAEh5XBAcFhROWQB1atWkUhp4GBeA7TquHCgQDiOFqrKOSQBHCnEJSEhJzEAADpN1GgH9EQAAAAAElFTkSuQmCC"
+	},
+	{
+		"u": "https://piapro.jp/weep",
+		"t": "ピアプロ (Piapro)",
+		"i": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAACVBMVEXrOIInksr////agCxrAAAAAnRSTlP/AOW3MEoAAAB7SURBVHja5dYxCsAgEAXR+f/+hw6kCkRkp5AUmVL3VRYuScKwJCFBlBBUHrCudwzro+G4IG1rSOtE60TrRDWQos8AAzZHsL2cARiJ5Y0H/BH0DJAv/ToagL7iNEACTgMcAAdQgE2boa8BEuAAOIAD8qfuoU3ALyd2/bkA1wgFzbc4cygAAAAASUVORK5CYII="
+	},
+
+
+	
 	{
 		"u": "https://note.com/weep/",
 		"t": "Note",
@@ -93,6 +112,11 @@
 		"u": "https://fedibird.com/@weepjp",
 		"t": "Mastodon(Fedibird)",
 		"i": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAACVBMVEX///+ZAJn///+EzmbqAAAAAXRSTlMAQObYZgAAAIpJREFUSMft1dEKgDAIBVCv///R0UM1TXOXtYjIpzQPKyIVOQJ5SBC4DrL9RABOAJwAOAGQggWmomsk2SZ8+95kswiotj02i4C24bIaaA2ChzHVBDhryhEorn/wNZD+Uy8H3WNjKpg8+NhRTM7uke0j7la9Ect9OS4eOEIuPmmnqE+kwZ2i/9Wj7gXk/ghXOGY05AAAAABJRU5ErkJggg=="
+	},
+	{
+		"u": "https://nightly.fedibird.com/@weep",
+		"t": "Mastodon(Fedibird Nightly)",
+		"i": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAAAx0lEQVRYw+3ZSw6AMAgE0Llo73+MujV+2ilQIApxJ+JLVFIq+iwamu0xvh08KQwL/pQxC4GaRxNiNXcTwjUXEzJozqasINkLaJJ5uYoF8e1K09hYEN/NlX2fAnUuljI9QHyoQOIHRFYwAC2JySJy0NacAhWoQAUq0C6Q4cquQB8E+Q8eBbKdy/xG6QyUFKD7cjsM9DauBGw2jKe2ZZBYT46RQtC+kOyg/RiUwWSwLTytoAV1998Jc5C5yQAUZcL4dDqQnrX6lR3K2facQjhuWAAAAABJRU5ErkJggg=="
 	},
 	{
 		"u": "https://misskey.io/@weepjp",
