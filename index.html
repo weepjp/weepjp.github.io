@@ -74,6 +74,23 @@
     background: #fff;
   }
 
+  .error {
+    color:#ff785f; 
+    border: 6px solid #ff785f;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 1px;
+    justify-content: center;
+    width: 320px;
+    height: 320px;
+    background:#333;
+    animation-name: fadein;
+    animation-duration: .8s;
+  }
+   .error a,  .error a:hover{
+    color: #ff785f;
+  }
+
   .page-text {
     text-align: center;
   }
@@ -114,6 +131,14 @@
     animation: gkbr 0.1s infinite;
   }
 
+
+
+  @keyframes fadein {
+    from {opacity: 0;}
+    to { opacity: 1; }
+  }
+
+
   .separator {
     width: 100%;
   }
@@ -143,16 +168,16 @@
 
   const timeoutPromise = new Promise((_, reject) => {
     setTimeout(() => {
-      reject(new Error('データの読み込みがタイムアウトしました。。。'));
+      reject(new Error('Timeout'));
     }, 10000);
   });
 
   Promise.race([
     timeoutPromise,
-    fetch('/l.json?2025-07-20-02')
+    fetch('l.json?2025-07-20-02')
       .then(response => {
         if (!response.ok) {
-          throw new Error('データの読み込みができませんでした。。。');
+          throw new Error('Unable to load data');
         }
         return response.json();
       })
@@ -163,7 +188,7 @@
   })
   .catch(error => {
     console.error('Error:', error);
-    loadingElement.innerHTML = `<div class="loading">${error.message}</div>`;
+    loadingElement.innerHTML = `<div class="error"><h1>Error Message:</h1><p><u>${error.message}</u></p><p>Sorry, Please ask <br /><a href="https://x.com/weepjp/" target="_blank" rel="nofollow noopener">@weepjp</a> about this!</p></div>`;
   });
 
   function displayLinks(links) {
