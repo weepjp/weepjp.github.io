@@ -59,10 +59,6 @@
     font-size: 24px;
   }
 
-  #loading img {
-    width: 48px;
-  }
-
   .loading {
     border: 6px solid #cdcdfe;
     border-radius: 10px;
@@ -85,7 +81,7 @@
     height: 320px;
     background:#333;
     animation-name: fadein;
-    animation-duration: .8s;
+    animation-duration: 2.4s;
   }
    .error a,  .error a:hover{
     color: #ff785f;
@@ -106,8 +102,6 @@
     justify-content: center;
     width: 320px;
     background: #fff;
-    animation-name: fadein;
-    animation-duration: 1s;
   }
 
   .link-item {
@@ -121,11 +115,11 @@
   }
 
   @keyframes gkbr {
-    0% { transform: translate(0px, 0px) rotateZ(0deg); }
-    25% { transform: translate(2px, 2px) rotateZ(1deg); }
-    50% { transform: translate(0px, 2px) rotateZ(0deg); }
-    75% { transform: translate(2px, 0px) rotateZ(-1deg); }
-    100% { transform: translate(0px, 0px) rotateZ(0deg); }
+    0%   { transform: translate(0px, 0px) rotateZ(0deg);  }
+    25%  { transform: translate(2px, 2px) rotateZ(1deg);  }
+    50%  { transform: translate(0px, 2px) rotateZ(0deg);  }
+    75%  { transform: translate(2px, 0px) rotateZ(-1deg); }
+    100% { transform: translate(0px, 0px) rotateZ(0deg);  }
   }
 
   .link-item img:hover {
@@ -136,8 +130,9 @@
 
 
   @keyframes fadein {
-    from {opacity: 0;}
-    to { opacity: 1; }
+    0%   {opacity: 0;}
+    25%  {opacity: 1;}
+    100% {opacity: 1;}
   }
 
 
@@ -151,7 +146,7 @@
 
 <div id="loading">
   <div class="loading">
-    <p><img alt="Loading..." title="Loading..." src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAAAwCAMAAACBtxzkAAAACGFjVEwAAAADAAAAAM7tusAAAAAMUExURQAAAP///wAAANfv97oi3CIAAAABdFJOUwBA5thmAAAAGmZjVEwAAAAAAAAASgAAADAAAAAAAAAAAAAKAGQAAP1F6tYAAADXSURBVEjH7dQxDoMwEERR53P/O0cKxRSzy+BNgRTld24eXjBe/34rvBHTNpNeVmu1TxFUWXQjLE9Ooxl0fCJLbjUUWcobExWk9PqBipK0N6SoJGULKMeDZPo0qx6P0gKzLKMaCW5TIKo56vepeAa0gKHke81U7nmKsyuKs28pt+YD6heE5laATF1ZAFuULLsZAgWX1FGPaFKkZOlbREoSdo9OKERVJwJkefJ7SstgmcSytikydQ9DUrASxzZFljKlGsMlj1CgptbKzRlvII21NSkhc2s90BvV0gpeXWcbgAAAABpmY1RMAAAAAQAAAEYAAAApAAAAAAAAAAYACgBkAgDlCc/9AAAA5WZkQVQAAAACSMe11EEKwzAMAMFk9f8/tzSkmyI7Vmy6Rx0GIYO3fwXYMmKTyH5pxgINewglI1mLiFLriEXFho5K3QEiAkjKhCOkUnOMOByVar/M4ZzMPsvoyAA8YlyHIQOZsTaTFacyeR+Zdz2GzBjhNlZlDICll7ImA+sMn8S6DNwwoDVioMlcd1DJjI6SDEx8OYmhxiADESB5twy7kZkAToYmk3Ayczq9N1HpMDoyVBg6TMhUrttn2Kg5MGCshKjIhIxOVcnHsSIig8ydhKnYd06qq8iYY2pto9YUWyNya4ZNKi+yAgq7nlOfqwAAABpmY1RMAAAAAwAAAEoAAAAqAAAAAAAAAAYACgBkAADLHQSIAAAA12ZkQVQAAAAESMe11FEKwzAMBNF4cv87F1zaZaFCcpbOXxx4yMTO9e/4lDuwduxSKbOQYh1rOOOdYHIiSzvLLUGBJahvQEmKx5KUWojKLEm5haSBOqTKWxNTWsQeh9R6QrETVcZgh9zAiFo9dYtSGgP6TyjrJ/XWJE2obYEpNtr8jAJGmcrZcXeqGmT8mwfQIA1FS1EP5bs2qrKqOKYYSj1VWyYNqf4CHVA0TCl9V1HPJK3jFYyk+icjShk0ou6GaiQFmxLWd1XpZSQ5FUCyzG2kebmkUugFzNkJ3D0h+9sAAAAASUVORK5CYII="></p>
+    <p><img alt="Loading...?" title="Loading...?" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAAAwCAMAAACBtxzkAAAACGFjVEwAAAADAAAAAM7tusAAAAAMUExURQAAAP///wAAANfv97oi3CIAAAABdFJOUwBA5thmAAAAGmZjVEwAAAAAAAAASgAAADAAAAAAAAAAAAAKAGQAAP1F6tYAAADXSURBVEjH7dQxDoMwEERR53P/O0cKxRSzy+BNgRTld24eXjBe/34rvBHTNpNeVmu1TxFUWXQjLE9Ooxl0fCJLbjUUWcobExWk9PqBipK0N6SoJGULKMeDZPo0qx6P0gKzLKMaCW5TIKo56vepeAa0gKHke81U7nmKsyuKs28pt+YD6heE5laATF1ZAFuULLsZAgWX1FGPaFKkZOlbREoSdo9OKERVJwJkefJ7SstgmcSytikydQ9DUrASxzZFljKlGsMlj1CgptbKzRlvII21NSkhc2s90BvV0gpeXWcbgAAAABpmY1RMAAAAAQAAAEYAAAApAAAAAAAAAAYACgBkAgDlCc/9AAAA5WZkQVQAAAACSMe11EEKwzAMAMFk9f8/tzSkmyI7Vmy6Rx0GIYO3fwXYMmKTyH5pxgINewglI1mLiFLriEXFho5K3QEiAkjKhCOkUnOMOByVar/M4ZzMPsvoyAA8YlyHIQOZsTaTFacyeR+Zdz2GzBjhNlZlDICll7ImA+sMn8S6DNwwoDVioMlcd1DJjI6SDEx8OYmhxiADESB5twy7kZkAToYmk3Ayczq9N1HpMDoyVBg6TMhUrttn2Kg5MGCshKjIhIxOVcnHsSIig8ydhKnYd06qq8iYY2pto9YUWyNya4ZNKi+yAgq7nlOfqwAAABpmY1RMAAAAAwAAAEoAAAAqAAAAAAAAAAYACgBkAADLHQSIAAAA12ZkQVQAAAAESMe11FEKwzAMBNF4cv87F1zaZaFCcpbOXxx4yMTO9e/4lDuwduxSKbOQYh1rOOOdYHIiSzvLLUGBJahvQEmKx5KUWojKLEm5haSBOqTKWxNTWsQeh9R6QrETVcZgh9zAiFo9dYtSGgP6TyjrJ/XWJE2obYEpNtr8jAJGmcrZcXeqGmT8mwfQIA1FS1EP5bs2qrKqOKYYSj1VWyYNqf4CHVA0TCl9V1HPJK3jFYyk+icjShk0ou6GaiQFmxLWd1XpZSQ5FUCyzG2kebmkUugFzNkJ3D0h+9sAAAAASUVORK5CYII="></p>
     <p>Now Loading...</p>
   </div>
 </div>
@@ -190,7 +185,7 @@
   })
   .catch(error => {
     console.error('Error:', error);
-    loadingElement.innerHTML = `<div class="error"><h1>Error Message:</h1><p><u>${error.message}</u></p><p>Sorry, Please ask <br /><a href="https://x.com/weepjp/" target="_blank" rel="nofollow noopener">@weepjp</a> about this!</p></div>`;
+    loadingElement.innerHTML = `<div class="error"><h1>Error Message:</h1><p><u>${error.message}</u></p><p>Sorry, Please ask <br /><a href="https://x.com/weepjp/" target="_blank" rel="nofollow noopener">@weepjp</a> about this!</p> <p><img alt="Error...?" title="Error...?" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAAAwCAMAAACBtxzkAAAACGFjVEwAAAADAAAAAM7tusAAAAAMUExURQAAAP///wAAANfv97oi3CIAAAABdFJOUwBA5thmAAAAGmZjVEwAAAAAAAAASgAAADAAAAAAAAAAAAAKAGQAAP1F6tYAAADXSURBVEjH7dQxDoMwEERR53P/O0cKxRSzy+BNgRTld24eXjBe/34rvBHTNpNeVmu1TxFUWXQjLE9Ooxl0fCJLbjUUWcobExWk9PqBipK0N6SoJGULKMeDZPo0qx6P0gKzLKMaCW5TIKo56vepeAa0gKHke81U7nmKsyuKs28pt+YD6heE5laATF1ZAFuULLsZAgWX1FGPaFKkZOlbREoSdo9OKERVJwJkefJ7SstgmcSytikydQ9DUrASxzZFljKlGsMlj1CgptbKzRlvII21NSkhc2s90BvV0gpeXWcbgAAAABpmY1RMAAAAAQAAAEYAAAApAAAAAAAAAAYACgBkAgDlCc/9AAAA5WZkQVQAAAACSMe11EEKwzAMAMFk9f8/tzSkmyI7Vmy6Rx0GIYO3fwXYMmKTyH5pxgINewglI1mLiFLriEXFho5K3QEiAkjKhCOkUnOMOByVar/M4ZzMPsvoyAA8YlyHIQOZsTaTFacyeR+Zdz2GzBjhNlZlDICll7ImA+sMn8S6DNwwoDVioMlcd1DJjI6SDEx8OYmhxiADESB5twy7kZkAToYmk3Ayczq9N1HpMDoyVBg6TMhUrttn2Kg5MGCshKjIhIxOVcnHsSIig8ydhKnYd06qq8iYY2pto9YUWyNya4ZNKi+yAgq7nlOfqwAAABpmY1RMAAAAAwAAAEoAAAAqAAAAAAAAAAYACgBkAADLHQSIAAAA12ZkQVQAAAAESMe11FEKwzAMBNF4cv87F1zaZaFCcpbOXxx4yMTO9e/4lDuwduxSKbOQYh1rOOOdYHIiSzvLLUGBJahvQEmKx5KUWojKLEm5haSBOqTKWxNTWsQeh9R6QrETVcZgh9zAiFo9dYtSGgP6TyjrJ/XWJE2obYEpNtr8jAJGmcrZcXeqGmT8mwfQIA1FS1EP5bs2qrKqOKYYSj1VWyYNqf4CHVA0TCl9V1HPJK3jFYyk+icjShk0ou6GaiQFmxLWd1XpZSQ5FUCyzG2kebmkUugFzNkJ3D0h+9sAAAAASUVORK5CYII="></p></div>`;
   });
 
   function displayLinks(links) {
