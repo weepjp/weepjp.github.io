@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>weep.me - おいらの居場所。</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@_weep">
+  <meta name="twitter:creator" content="@weepjp">
+  <meta name="twitter:url" content="https://weep.me/">
+  <meta name="twitter:title" content="weep.me - おいらの居場所。">
+  <meta name="twitter:description" content="weepjp account links">
+  <meta name="twitter:image" content="https://weep.me/og.png?2025-07-20-02" />
+
+  <meta property="og:title" content="weep.me - おいらの居場所。" />
+  <meta property="og:description" content="weepjp account links" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://weep.me/" />
+  <meta property="og:image" content="https://weep.me/og.png?2025-07-20-02" />
+  <meta property="og:image:type" content="image/png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:site_name" content="weep.me - おいらの居場所。" />
+  <meta property="og:locale" content="ja_JP" />
+
+  <link href="https://weep.me/" rel="start" title="Home" />
+  <link href="https://weep.me/favicon.ico?2025-07-20-02" rel="icon" type="image/x-icon" />
+  <link href="https://weep.me/favicon.ico?2025-07-20-02" rel="shortcut icon" type="image/x-icon" />
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family:Arial,sans-serif;
+      background:#dec;
+      color:#111;
+      padding-top:48px;
+      padding-bottom:48px;
+      min-height:100vh;
+      position:relative;
+    }
+    header, footer {
+      position:fixed; left:0; right:0;
+      background:rgba(255,255,255,0.9);
+      z-index:100; text-align:center;
+    }
+    header { top:0; height:48px; border-bottom:1px solid #cdcdfe; }
+    footer { bottom:0; height:48px; border-top:1px solid #cdcdfe; }
+    header h1 { font-size:1.2rem; padding:12px 0; color:#333; }
+    footer small { font-size:0.8rem; color:#555; line-height:48px; }
+    footer a     { color:#111; text-decoration:underline; }
+
+    .box {
+      max-width:1000px;
+      margin:32px auto;
+      background:#fff;
+      border:6px solid #cdcdfe;
+      border-radius:6px;
+      padding:16px;
+    }
+    .container {
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap:8px;
+      row-gap:24px;
+    }
+    @media (min-width: 600px)  { .container { grid-template-columns: repeat(3,1fr); } }
+    @media (min-width: 800px)  { .container { grid-template-columns: repeat(4,1fr); } }
+    @media (min-width: 1200px) { .container { grid-template-columns: repeat(5,1fr); } }
+
+    h2 {
+      grid-column:1 / -1;
+      font-size:1.2rem;
+      margin:32px 0 4px; /* 上下に余白 */
+      color:#333;
+      text-align:left;
+      justify-self:start;
+    }
+    .link {
+      width:max-content;
+      margin:0 auto;
+      text-decoration:none;
+      color:inherit;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      transition:transform .2s,box-shadow .2s;
+    }
+    .link:hover, .link:active {
+      filter:grayscale(100%);
+      animation:gkbr 0.1s infinite;
+    }
+    .link img {
+      width:48px; height:48px;
+      border-radius:3px;
+      object-fit:cover;
+      margin-bottom:4px;
+    }
+    .title    { font-size:0.85rem; font-weight:bold; text-align:center; line-height:1.2; }
+    .subtitle { font-size:0.7rem; color:#666; text-align:center; line-height:1.2; }
+
+    .message {
+      grid-column:1 / -1;
+      display:flex; flex-direction:column;
+      justify-content:center; align-items:center;
+      padding:12px; border-radius:6px;
+      font-size:1rem; text-align:center;
+      opacity:0; animation:bounceFadeIn .5s ease-out forwards;
+      margin-bottom:16px; width:100%; box-sizing:border-box;
+    }
+    .message.loading { color:#555; }
+    .message.error   { color:#c00; }
+    .message.error button {
+      margin-top:8px; padding:6px 12px;
+      border:none; border-radius:4px;
+      background:#c00; color:#fff;
+      font-size:0.85rem; cursor:pointer;
+    }
+
+    @keyframes bounceFadeIn {
+      0%   { opacity:0; transform:scale(0.8); }
+      60%  { opacity:1; transform:scale(1.1); }
+      100% { opacity:1; transform:scale(1); }
+    }
+    @keyframes gkbr {
+      0%   { transform:translate(0,0) rotateZ(0deg); }
+      25%  { transform:translate(2px,2px) rotateZ(1deg); }
+      50%  { transform:translate(0,2px) rotateZ(0deg); }
+      75%  { transform:translate(2px,0) rotateZ(-1deg); }
+      100% { transform:translate(0,0) rotateZ(0deg); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>weep.me - おいらの居場所。</h1>
+  </header>
+
+  <div class="box">
+    <div class="message loading" id="status">
+      <div>Now loading…</div>
+    </div>
+    <div class="container" id="links"></div>
+  </div>
+
+  <footer>
+    <small>
+      © 2018–2025
+      <a href="https://weep.jp/" target="_blank">weepjp</a>
+      (<a href="https://github.com/weepjp/weepjp.github.io" target="_blank">src</a>)
+    </small>
+  </footer>
+
+  <script>
+    const linksEl  = document.getElementById('links');
+    const statusEl = document.getElementById('status');
+    const MIN_MS   = 200, INTERVAL = 1000;
+
+    async function loadLinks() {
+      const start = Date.now();
+      try {
+        const res = await fetch(`l.json?t=${Date.now()}`);
+        if (!res.ok) throw new Error(res.statusText);
+        const data = await res.json();
+        const elapsed = Date.now() - start;
+        setTimeout(() => render(data), Math.max(0, MIN_MS - elapsed));
+      } catch (err) {
+        const elapsed = Date.now() - start;
+        setTimeout(() => renderError(err), Math.max(0, MIN_MS - elapsed));
+      }
+    }
+
+    function render(data) {
+      statusEl.style.display = 'none';
+      linksEl.innerHTML = '';
+      const cats = [];
+      data.forEach(i => { if (!cats.includes(i.c)) cats.push(i.c); });
+      cats.forEach(cat => {
+        const grp = data.filter(l => l.c === cat).sort((a,b)=>a.n-b.n);
+        if (!grp.length) return;
+        const h2 = document.createElement('h2'); h2.textContent = cat;
+        linksEl.appendChild(h2);
+        grp.forEach(l => {
+          const a = document.createElement('a');
+          a.href=l.u; a.className='link'; a.target='_blank'; a.title=l.t;
+          a.rel='noopener noreferrer me';
+          a.innerHTML=`
+            <img src="${l.i}" alt="${l.t}">
+            <div class="title">${l.t}</div>
+            <div class="subtitle">${l.d}</div>`;
+          linksEl.appendChild(a);
+        });
+      });
+    }
+
+    function renderError(err) {
+      statusEl.innerHTML = `
+        <div>Error: ${err.message}</div>
+        <button id="retry">Reload</button>`;
+      statusEl.className = 'message error';
+      document.getElementById('retry').onclick = loadLinks;
+    }
+
+    loadLinks();
+    setInterval(loadLinks, INTERVAL);
+  </script>
+</body>
+</html>
